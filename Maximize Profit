@@ -53,6 +53,20 @@ public class Solution {
 
     static int maximizeProfit(int[] a, int[] b, int m, int k) {
         // Complete this function
+        int totaldollars=0;
+        int totalMaxdollars=0;
+        
+        for(int i=0; i<a.length;i++){
+            totaldollars = m * b[i] * a[i];
+            if(totaldollars>totalMaxdollars){
+                totalMaxdollars = totaldollars;
+             }
+        }
+        totaldollars = m * k;
+        if(totaldollars>totalMaxdollars){
+                totalMaxdollars = totaldollars;
+        }
+        return totalMaxdollars;
     }
 
     public static void main(String[] args) {
